@@ -429,6 +429,7 @@
         </div>
         <!-- titles end -->
         <!-- expart cards start-->
+
         <div class="swiper mySwiper our_expart_cards">
           <div class="swiper-wrapper">
             <div class="swiper-slide">
@@ -1115,6 +1116,16 @@
       window.addEventListener("resize", function () {
         swiper.destroy();
         initSwiper();
+      });
+
+      var swiper = new Swiper(".testimonial .mySwiper", {
+        spaceBetween: 50,
+        slidesPerView: 1,
+
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
       });
     </script>
   </body>

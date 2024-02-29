@@ -280,23 +280,6 @@ const testimonialSection = gsap.timeline({
   },
 });
 
-// Define animations for elements inside the testimonial section
-testimonialSection
-  .from(".testimonial_blue_sky", { y: -200, opacity: 0 })
-  .from(".testimonial_green_shape", { x: -200, opacity: 0 }, "-=0.5")
-  .from(".pen", { rotation: -360, opacity: 0 }, "-=0.5")
-  .from(".testimonial_right_content", { opacity: 0, y: 50 }, "-=0.5");
-
-// Initialize Swiper
-const swiper = new Swiper(".mySwiper", {
-  slidesPerView: 1,
-  spaceBetween: 30,
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
-});
-
 // counter
 gsap.registerPlugin(ScrollTrigger);
 
@@ -312,30 +295,6 @@ counterCards.forEach((card) => {
     {
       opacity: 1,
       y: 0,
-      duration: 0.5,
-      scrollTrigger: {
-        trigger: card,
-        start: "top 80%",
-        end: "bottom 20%",
-        toggleActions: "play reverse play reverse",
-      },
-    }
-  );
-});
-
-// expart section
-const expartCards = document.querySelectorAll(".our_expart_card");
-
-expartCards.forEach((card) => {
-  gsap.fromTo(
-    card,
-    {
-      x: -50,
-      opacity: 0,
-    },
-    {
-      x: 0,
-      opacity: 1,
       duration: 0.5,
       scrollTrigger: {
         trigger: card,
